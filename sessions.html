@@ -7,35 +7,177 @@
   <meta name="version" content="1.0.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Essilor HUBB - Sessions</title>
-  <link rel="stylesheet" href="./assets/css/sessions.css" />
+
+  <style>
+    html {
+      margin: 10px;
+      padding: 0;
+      width: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    .sessions-holder {
+      /* display: grid;
+      grid-template-columns: 1fr 6fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-row-gap: 3.5%;
+      grid-column-gap: 1.5em; */
+
+      grid-row-gap: 3.5%;
+      grid-column-gap: 1.5em;
+      display: flex;
+      /* transform: scale(0.70); */
+      max-width: 1160px;
+
+      /* margin-top: 5%;
+      margin-left: 10%; */
+    }
+
+    .left {
+      max-width: 520px;
+
+    }
+
+    .left .big-img {
+      width: 100%;
+      height: auto;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 625px;
+    }
+
+    .right .bg-img {
+      max-width: 100%;
+      height:auto;
+    }
+
+    .sessions-holder .sessions-item.general-sessions {
+      grid-row: 1/4;
+    }
+
+    /* .sessions-holder .sessions-item .button .img-button {
+      width: 15%;
+      border-radius: 30px;
+      position: relative;
+    } */
+
+    .sessions-item.breakouts1 {
+      grid-row: 1/2;
+    }
+
+    .sessions-item.challenge1 {
+      grid-row: 2/3;
+    }
+
+    .sessions-item.pumpkin-contest1 {
+      grid-row: 3/4;
+    }
+
+    /* .bg-img .img-button {
+      position: absolute;
+      top: 10%;
+      left: 65%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+    } */
+
+    .sessions-holder .sessions-item.breakouts1 {
+      position: relative;
+    }
+
+    .sessions-item {
+      position: relative;
+    }
+
+    a.button {
+      max-width: 175px;
+      max-height: 36px;
+      position: absolute;
+      right: 35px;
+      width: 29%;
+      height: 23%;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: hidden;
+      border-radius: 30px;
+      box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.3);
+    }
+
+    .img-button {
+      width: 100%;
+      height: auto;
+    }
+
+    /*
+    .sessions-holder .sessions-item.challenge1 .button{
+
+    }
+
+    .sessions-holder .sessions-item.pumpkin-contest1 .button{
+      bottom: 5%;
+      width: 21%;
+      left: 120%;
+      top: 40%;
+    }
+    */
+  </style>
 </head>
 
 <body>
   <div class="sessions-holder">
-    <div class="sessions-item long general-sessions">
-      <img class="bg-img" src="https://hubb.blob.core.windows.net/747001c4-626e-4a52-a186-056df2541adb-public/resources/GeneralSessions@2x.sessions.png" />
-      <a class="button" target="_self" href="https://essilorecpsalessummit.hubb.me/fe/schedule-builder/pages/Index/MainStage">
-        <img class="img-button" src="https://hubb.blob.core.windows.net/747001c4-626e-4a52-a186-056df2541adb-public/resources/BreakoutsButton@2x.png" />
-      </a>
+
+    <div class="left">
+      <div class="sessions-item long general-sessions">
+        <img class="big-img"
+          src="https://hubb.blob.core.windows.net/7d9b2415-df9d-4735-a549-33294a6c102c-public/resources/Logo@2x.png" />
+      </div>
     </div>
-    <div class="sessions-item short breakouts">
-      <img class="bg-img" src="https://hubb.blob.core.windows.net/747001c4-626e-4a52-a186-056df2541adb-public/resources/Breakouts@2x.png" />
-      <a class="button" target="_self" href="https://essilorecpsalessummit.hubb.me/fe/schedule-builder/sessions?session-date=2021-10-18T22:00:00-06:00">
-        <img class="img-button" src="https://hubb.blob.core.windows.net/747001c4-626e-4a52-a186-056df2541adb-public/resources/BreakoutsButton@2x.png" />
-      </a>
+    
+    <div class="right">
+      <div class="sessions-item short breakouts1">
+        <img class="bg-img"
+          src="https://hubb.blob.core.windows.net/7d9b2415-df9d-4735-a549-33294a6c102c-public/resources/General%20Sessions%20Day%201%20&%202@2x.png" />
+        <a class="button" target="_self"
+          href="https://aligngpsummit.hubb.me/fe/schedule-builder/sessions?session-date=all-days&session-type=32557">
+          <img class="img-button"
+            src="https://hubb.blob.core.windows.net/7d9b2415-df9d-4735-a549-33294a6c102c-public/resources/Button%20-%20ALL@2x.png" />
+        </a>
+      </div>
+  
+      <div class="sessions-item medium challenge1">
+        <img class="bg-img"
+          src="https://hubb.blob.core.windows.net/7d9b2415-df9d-4735-a549-33294a6c102c-public/resources/Lecture%20Sessions@2x.png" />
+        <a class="button" target="_shlf"
+          href="https://aligngpsummit.hubb.me/fe/schedule-builder/sessions?session-date=all-days&session-type=32556">
+          <img class="img-button"
+            src="https://hubb.blob.core.windows.net/7d9b2415-df9d-4735-a549-33294a6c102c-public/resources/Button%20-%20ALL@2x.png" />
+        </a>
+      </div>
+  
+      <div class="sessions-item medium pumpkin-contest1">
+        <img class="bg-img"
+          src="https://hubb.blob.core.windows.net/7d9b2415-df9d-4735-a549-33294a6c102c-public/resources/TED%20Talks@2x.png" />
+        <a class="button" target="_self"
+          href="https://aligngpsummit.hubb.me/fe/schedule-builder/sessions?session-date=all-days&session-type=32555">
+          <img class="img-button"
+            src="https://hubb.blob.core.windows.net/7d9b2415-df9d-4735-a549-33294a6c102c-public/resources/Button%20-%20ALL@2x.png" />
+        </a>
+      </div>
     </div>
-    <div class="sessions-item medium challenge">
-      <img class="bg-img" src="https://hubb.blob.core.windows.net/747001c4-626e-4a52-a186-056df2541adb-public/resources/Essilor%20Knowledge%20Bowl@2x.png" />
-      <a class="button" target="_self" href="#">
-        <img class="img-button" src="https://hubb.blob.core.windows.net/747001c4-626e-4a52-a186-056df2541adb-public/resources/BreakoutsButton@2x.png" />
-      </a>
-    </div>
-    <div class="sessions-item medium pumpkin-contest">
-      <img class="bg-img" src="https://hubb.blob.core.windows.net/747001c4-626e-4a52-a186-056df2541adb-public/resources/PumpkinContest@2x.sessions.png" />
-      <a class="button" target="_self" href="https://essilorecpsalessummit.hubb.me/fe/schedule-builder/pages/Index/Pumpkin">
-        <img class="img-button" src="https://hubb.blob.core.windows.net/747001c4-626e-4a52-a186-056df2541adb-public/resources/BreakoutsButton@2x.png" />
-      </a>
-    </div>
+
   </div>
 </body>
+
 </html>
